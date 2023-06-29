@@ -1,0 +1,129 @@
+body{
+    margin:0px;
+    background-image:url(/img/to\ do.png);
+    background-repeat: no-repeat;
+    background-size:100% 100% ;
+    background-attachment:fixed;
+    
+}
+/* include the padding and borderin an element total width and height */
+*{
+    box-sizing: border-box;
+}
+/* remove margin and padding from list */
+ul{
+    margin:0;
+    padding:0;
+     transition: 0.001s;
+}
+
+#MyUL{
+    position:fixed;
+    top:64%;
+    left:54%;
+    width:22.8%;
+    transform: rotate(-9deg);
+    
+}
+/* style the list item */
+ul li{
+    cursor:pointer;
+    position:relative;
+    padding:12px 8px 12px 40px;
+    list-style-type:none;
+    background:#eee;
+    font-size:18px;
+    transition:0.001s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul li:nth-child(odd){
+    background-color: rgb(50, 213, 215);
+    border:2px solid  rgb(50, 213, 215) ;
+}
+/* Darker backgroung color on hover */
+ul li:hover{
+    background: #101010;
+    color:white;
+    border:2px solid white;
+}
+
+/* style the header */
+.header{
+    width:350px;
+    margin-top:380px ;
+    margin-left:800px;
+    background-color:black;
+    padding:10px 15px;
+    transform: rotate(-9deg);
+    color:white;
+    text-align:center;
+    
+}
+/* clear float after the header */
+.header:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+/* style the input */
+input{
+    margin:0;
+    border:none;
+    border-radius:0;
+    width:75%;
+    padding:10px;
+    float:left;
+    font-size:16px;
+}
+/* style the "add button */
+.addBtn{
+    padding:9.5px;
+    width:25%;
+    background: #d9d9d9;
+    color:#555;
+    float:left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius:0;
+}
+
+.addBtn:hover{
+    background-color:black;
+    color:white;
+    border:1px solid white;
+}
+ul li.checked{
+    background:white;
+    /* color:#fff; */
+    color:black;
+    text-decoration: line-through;
+}
+/* add a"checked mark whwn clicked on */
+ul li.checked::before{
+    content:"";
+    position:absolute;
+    border-color: #d41e1e;
+    border-style:solid;
+    border-width: 0 2px 2px 0;
+    top:10px;
+    left:10px;
+    transform:rotate(45deg);
+    height:15px;
+    width:7px;
+   
+}
+
+/* style for close button */
+.close{
+    position:absolute;
+    right:0px;
+    top:0px;
+    padding:12px 16px 12px 16px;
+}
+.close:hover{
+    background-color: #f44336;
+    color:white;
+}
